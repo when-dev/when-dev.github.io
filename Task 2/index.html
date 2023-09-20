@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        Задание 2
+    </title>
+</head>
+
+<body>
+    <header class="header">
+        <ul class="ul">
+            <li><a href="https://image.spletnik.ru/resize/fit=contain,gravity=0.5x0.5,format=auto,width=1011,height=700/https://images.spletnik.ru/i/2/22zcMEq1MW/original.jpg">Райан Гослинг</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%85%D0%B0%D1%82%D0%BC%D0%B0_%D0%93%D0%B0%D0%BD%D0%B4%D0%B8">Ганди</a></li>
+            <li><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmemepedia.ru%2Fmalenkij-kianu-rivz%2F&psig=AOvVaw2eyba3jz1LZiPy3OG-kfVp&ust=1695303641499000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLiam66ouYEDFQAAAAAdAAAAABAE">Киано Ривз</a></li>
+        </ul>
+            <a href="https://www.youtube.com/watch?v=30jrmzzgHLc" class="logo"><img src="./images/logo-ryan.jpg"
+                    alt="Ryan Gosling Food Time" width="90" height="90"></a>
+            <h1 id="task1">Главная страница</h1>
+
+    </header>
+    <ul>
+        <li>
+          <a href="http://kubsu.ru">
+            абсолютную гиперссылку на главную страницу сайта kubsu.ru</a
+          >
+        </li>
+        <li>
+          <a href="https://kubsu.ru">
+            абсолютную гиперссылку на главную страницу сайта kubsu.ru https</a
+          >
+        </li>
+        <li>
+          <a href="./"
+            ><img src="./images/dog-cat.jpg" alt="image" width="300" height="200"
+          /></a>
+        </li>
+        <li>
+          <a href="/Task 1/Task 2/inner.html">сокращенную ссылку на внутреннюю страницу</a>
+        </li>
+        <li><a href="./index.html">сокращенную ссылку на главную страницу</a></li>
+        <li><a href="#form">ссылку на фрагмент текущей страницы</a></li>
+        <li>
+          <a href="http://kubsu.ru/?params1=value1&params2=value2&params3=value3"
+            >ссылку с тремя параметрами в URL</a
+          >
+        </li>
+        <li>
+          <a href="https://kubsu.ru/?id=section">ссылку с параметром id в URL</a>
+        </li>
+        <li>
+          <a href="./inner.html">относительную на страницу в текущем каталоге</a>
+        </li>
+        <li>
+          <a href="./about/about.html"
+            >относительную на страницу в каталоге about</a
+          >
+        </li>
+        <li>
+          <a href="./about/new/new.html"
+            >относительную на страницу в каталоге двумя уровнями выше</a
+          >
+        </li>
+        <li>
+          <p>Cтудент <a href="https://kubsu.ru/">Кубгу</a> (контексная ссылка)</p>
+        </li>
+        <li>
+          <a href="https://www.kubsu.ru/#section-content"
+            >ссылку на фрагмент страницы стороннего сайта</a
+          >
+        </li>
+  
+        <li>
+          <img
+            src="./images/it.jpg"
+            usemap="#Map"
+            alt="tyler durden"
+            width="250"
+            height="250"
+          />
+  
+          <map name="Map">
+            <area
+              href="https://moodle.kubsu.ru/course/view.php?id=780"
+              shape="rect"
+              coords="0,0,30,30"
+              alt="прямоугольная ссылка"
+            />
+            <area
+              href="https://moodle.kubsu.ru/course/view.php?id=780"
+              shape="circle"
+              coords="200,200,100"
+              alt="круглая ссылка"
+            />
+          </map>
+        </li>
+        <li><a href="">ссылка с пустым href</a></li>
+        <li><a> ссылка без href</a></li>
+        <li>
+          <a href="https://kubsu.ru/" rel="nofollow"
+            >ссылка по которой нельзя следовать яндексу</a
+          >
+        </li>
+        <li>
+          <!--noindex--><a href="https://kubsu.ru/"
+            >ссылка по которой нельзя индексировать яндексу</a
+          ><!--/noindex-->
+        </li>
+        <li>
+          <ol>
+            <li title="первый"><a href="./index.html">ссылка в списке 1</a></li>
+            <li title="второй">
+              <a href="./inner.html">ссылка в списке 2</a>
+            </li>
+            <li title="третий">
+              <a href="./about/about.html">ссылка в списке 3</a>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <a
+            href="ftp://demo:demo@http://demo.wftpserver.com/main.html/download/Summer.jpg"
+            >FTP файл</a
+          >
+        </li>
+      </ul>
+
+        <h2 id="table">Таблица</h2>
+
+        <table>
+            <tr class="first">
+                <th>Колонка 1 </th>
+                <th>Колонка 2 </th>
+                <th>Колонка 3 </th>
+                <th>Колонка 4 </th>
+            </tr>
+            <tr class="second">
+                <td colspan="2">Ячейка 11 объединенная с 12</td>
+                <td>Ячейка 13</td>
+                <td>Ячейка 14</td>
+            </tr>
+            <tr class="first">
+                <td>Ячейка 21</td>
+                <td>Ячейка 22</td>
+                <td colspan="2">Ячейка 23 объединенная с 24</td>
+            </tr>
+            <tr class="second">
+                <td>Ячейка 31</td>
+                <td colspan="2">Ячейка 32 объединенная с 33</td>
+                <td>Ячейка 34</td>
+            </tr>
+            <tr class="first">
+                <td colspan="2">Ячейка 41 объединенная с 42</td>
+                <td>Ячейка 43</td>
+                <td>Ячейка 44</td>
+            </tr>
+            <tr class="second">
+                <td>Ячейка 51</td>
+                <td>Ячейка 52</td>
+                <td rowspan="2">Ячейка 53 объединенная с 63</td>
+                <td>Ячейка 54</td>
+            </tr>
+            <tr class="first">
+                <td>Ячейка 61</td>
+                <td>Ячейка 62</td>
+                <td>Ячейка 64</td>
+            </tr>
+        </table>
+
+        <p id="about">Вы перешли по фрагменту</p>
+        <h1>Форма</h1>
+    <form id="form">
+      <label for="fio">ФИО:</label>
+      <input type="text" id="fio" name="fio" required /><br /><br />
+
+      <label for="phone">Телефон:</label>
+      <input type="tel" id="phone" name="phone" required /><br /><br />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="birthdate">Дата рождения:</label>
+      <input type="date" id="birthdate" name="birthdate" required /><br /><br />
+
+      <label>Пол:</label>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Мужской</label>
+      <input type="radio" id="female" name="gender" value="female" required />
+      <label for="female">Женский</label><br /><br />
+
+      <label>Любимый язык программирования:</label>
+      <label>
+        <br />
+        <select>
+          <option disabled>Любимый язык программирования</option>
+          <option value="Js">Js</option>
+          <option value="C++">C++</option>
+          <option value="Pascal">Pascal</option>
+          <option value="PHP">PHP</option>
+          <option value="Python">Python</option>
+          <option value="Java">Java</option>
+          <option value="Haskel">Haskel</option>
+          <option value="Clojure">Clojure</option>
+          <option value="Prolog">Prolog</option>
+          <option value="Scala">Scala</option>
+          <option value="C">C</option>
+        </select> </label
+      ><br /><br />
+
+      <label for="bio">Биография:</label><br />
+      <textarea id="bio" name="bio" rows="4" cols="50" required></textarea
+      ><br /><br />
+
+      <input type="checkbox" id="contract" name="contract" required />
+      <label for="contract">С контрактом ознакомлен(а)</label><br /><br />
+
+      <input type="submit" value="Сохранить" formnovalidate />
+    </form>
+    </nav>
+    <footer class="footer-bg">
+        Е. Гуков
+    </footer>
+</body>
+
+</html>
