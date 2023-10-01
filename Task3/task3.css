@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+  margin: 30px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.border {
+  border: 5px solid black;
+  margin: 20px 0 20px 0;
+}
+
+.header__content-up {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+.header__content-down nav ul li {
+  margin: 10px 0 10px 0;
+}
+
+.header__content-down nav ul li a {
+  color: red;
+  font-size: 35px;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table .odd, .even {
+  font-size: 25px;
+}
+
+.table_header {
+  text-align: center;
+}
+
+.odd {
+  background-color: #000000;
+  color: red;
+}
+
+.even {
+  background-color: red;
+  color: black;
+
+}
+
+.table_item {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.section__links h2 {
+  color: red;
+}
+
+.section__links li a {
+  color: darkred;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.section__form h2 {
+  color: red;
+}
+
+#form {
+  font-size: 18px;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 20px; 
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  width: 80%;
+  padding: 15px; 
+  font-size: 20px; 
+  margin-top: 10px; 
+}
+
+input[type="radio"] {
+  transform: scale(1.8); 
+  margin-right: 15px; 
+}
+
+input[type="checkbox"] {
+  transform: scale(1.8); 
+  margin-right: 15px;
+}
+
+input[type="submit"] {
+  padding: 15px 30px; 
+  font-size: 20px; 
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Optional: Style the select dropdown */
+select {
+  padding: 15px;
+}
+
+/* Optional: Style the textarea */
+textarea {
+  resize: vertical;
+}
+
+
+.footer {
+  background-color: black;
+  padding: 40px;
+}
+
+.footer h2 {
+  color: darkred;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    margin-top: 120px;
+    font-size: 20px;
+    margin: 30px; 
+  }
+
+  .header__content-up {
+    padding-right: 50px; 
+  }
+
+  .header__content-down nav ul li a {
+    font-size: 35px;
+  }
+
+  .table .odd, .even {
+    font-size: 25px; 
+  }
+
+  .footer {
+    padding: 40px; 
+  }
+
+  .footer h2 {
+    font-size: 30px;
+  }
+}
