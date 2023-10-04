@@ -230,13 +230,13 @@
           <h2>Форма</h2>
           <form id="form">
             <label for="fio">ФИО:</label>
-            <input type="text" id="fio" name="fio" required /><br /><br />
+            <input type="text" id="fio" name="fio" required pattern="^[А-Яа-яЁё\s]+$"><br /><br />
 
             <label for="phone">Телефон:</label>
-            <input type="tel" id="phone" name="phone" required /><br /><br />
+            <input type="tel" id="phone" name="phone" required pattern="^[ 0-9]+$" ><br /><br />
 
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required /><br /><br />
+            <input type="email" id="email" name="email" required ><br /><br />
 
             <label for="birthdate">Дата рождения:</label>
             <input
