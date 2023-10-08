@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.border {
+  border: 5px solid black;
+  margin: 20px 0 20px 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column; 
+  text-align: center; 
+}
+
+.header__container {
+  min-width: 380px;
+  margin: 10px auto;
+  gap: 70px;
+}
+
+.header__content-up {
+  display: flex;
+  align-items: center;
+  order: 1;
+}
+
+.header__content-up h1 {
+  font-size: 16px;
+}
+
+.header__content-up .logo {
+  margin-right: 20px;
+}
+
+.header__content-down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  order: 3; 
+  text-align: right;
+}
+
+.header__content-down nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header__content-down nav ul li {
+  margin: 10px;
+}
+
+.header__content-down nav ul li a {
+  color: red;
+  font-size: 14px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section__table {
+  width: 100%;
+  order: 2;
+}
+
+.even {
+  background-color: red;
+}
+
+.odd {
+  background-color: black;
+  color: #fff;
+}
+
+.section__links {
+  width: 100%;
+  order: 3;
+}
+
+.section__form {
+  width: 100%;
+  order: 4;
+}
+
+.footer {
+  text-align: center;
+}
+
+@media (min-width: 320px) {
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
+  body {
+    font-size: 12px;
+  }
+  .header__content-up {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .header__content-down nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__content-up h1 {
+    font-size: 20px;
+  }
+  .header__content-down nav ul {
+    flex-direction: row;
+  }
+  body {
+    font-size: 18px;
+  }
+
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
