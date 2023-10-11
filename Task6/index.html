@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задание 6</title>
+  </head>
+  <body>
+    <h1>Калькулятор стоимости услуги</h1>
+    <label for="serviceType">Выберите тип услуги:</label>
+    <input type="radio" name="serviceType" value="type1" id="type1" data-price="5"> Тип 1
+    <input type="radio" name="serviceType" value="type2" id="type2" data-price="10"> Тип 2
+    <input type="radio" name="serviceType" value="type3" id="type3" data-price="15"> Тип 3
+
+    <div id="optionsDiv">
+        <label for="optionsSelect">Выберите опцию:</label>
+        <select id="optionsSelect">
+            <option value="option1" data-price="5">Опция 1 - $5</option>
+            <option value="option2" data-price="10">Опция 2 - $10</option>
+        </select>
+    </div>
+
+    <div id="propertiesDiv">
+        <label for="propertyCheckbox">Дополнительное свойство:</label>
+        <input type="checkbox" id="propertyCheckbox" data-price="5"> Дополнительное свойство - $5
+    </div>
+
+    <label for="quantity">Введите количество услуг:</label>
+    <input type="text" id="quantity" placeholder="Количество услуг">
+
+    <p>Стоимость заказа: $<span id="totalCost">0</span></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
