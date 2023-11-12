@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let quantity = parseFloat(quantityInput.value);
 
-    // Дополнительная проверка на отрицательные числа
     if (isNaN(quantity) || quantity < 0) {
       quantity = 0;
     }
