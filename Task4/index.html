@@ -1,49 +1,135 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <title>Задание 4</title>
-  </head>
 
-  <body>
-    <header class="header bg-light">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-12 col-md-6">
-              <div class="d-flex align-items-center">
-                <div class="logo mr-3">
-                  <a href="https://www.youtube.com/watch?v=0lVQGcm3NDY" target="_blank">
-                    <img src="./images/logo.jpg" alt="logo" class="img-fluid" width="100" height="100" />
-                  </a>
-                </div>
-                <h1>Главная страница</h1>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <title>Задание 4</title>
+</head>
+
+<body>
+  <header class="header bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6">
+          <div class="d-flex align-items-center">
+            <div class="logo mr-3">
+              <a href="https://www.youtube.com/watch?v=0lVQGcm3NDY" target="_blank">
+                <img src="./images/logo.jpg" alt="logo" class="img-fluid" width="100" height="100" />
+              </a>
             </div>
-            <div class="col-12 col-md-6">
-              <div class="header__content-down text-right">
-                <nav>
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#table">Таблица</a></li>
-                    <li class="list-inline-item"><a href="#links">Ссылки</a></li>
-                    <li class="list-inline-item"><a href="#form">Форма</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+            <h1>Главная страница</h1>
           </div>
         </div>
-      </header>
-      
+        <div class="col-12 col-md-6 container-lg">
+          <div class="d-flex flex-row flex-sm-column text-right">
+            <nav>
+              <ul class="list-inline flex-sm-column">
+                <li class="list-inline-item"><a href="#table">Таблица</a></li>
+                <li class="list-inline-item"><a href="#links">Ссылки</a></li>
+                <li class="list-inline-item"><a href="#form">Форма</a></li>
+              </ul>              
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <main class="main">
-      <div class="container">
-        <section class="section__table">
-          <table class="table table-bordered">
+
+  <main class="main">
+    <div class="container">
+      <div class="row d-md-flex flex-column">
+        <section class="col-6 col-md-12 order-2 order-md-1">
+          <ul class="list-unstyled">
+            <li class="references__item">
+              <h2 id="links">Ссылки</h2>
+            </li>
+            <li>
+              <a href="http://kubsu.ru">
+                абсолютную гиперссылку на главную страницу сайта kubsu.ru</a>
+            </li>
+            <li>
+              <a href="https://kubsu.ru">
+                абсолютную гиперссылку на главную страницу сайта kubsu.ru
+                https</a>
+            </li>
+            <li>
+              <a href="./images/dog-cat.jpg"><img src="./images/dog-cat.jpg" alt="image" width="300" height="200" /></a>
+            </li>
+            <li>
+              <a href="">сокращенную ссылку на внутреннюю страницу</a>
+            </li>
+            <li>
+              <a href="./index.html">сокращенную ссылку на главную страницу</a>
+            </li>
+            <li><a href="#form">ссылку на фрагмент текущей страницы</a></li>
+            <li>
+              <a href="http://kubsu.ru/?params1=value1&params2=value2&params3=value3">ссылку с тремя параметрами в
+                URL</a>
+            </li>
+            <li>
+              <a href="https://kubsu.ru/?id=section">ссылку с параметром id в URL</a>
+            </li>
+            <li>
+              <a href="./inner.html">относительную на страницу в текущем каталоге</a>
+            </li>
+            <li>
+              <a href="./about/about.html">относительную на страницу в каталоге about</a>
+            </li>
+            <li>
+              <a href="./about/new/new.html">относительную на страницу в каталоге двумя уровнями выше</a>
+            </li>
+            <li>
+              <p>
+                Cтудент <a href="https://kubsu.ru/">Кубгу</a> (контексная
+                ссылка)
+              </p>
+            </li>
+            <li>
+              <a href="https://www.kubsu.ru/#section-content">ссылку на фрагмент страницы стороннего сайта</a>
+            </li>
+
+            <li>
+              <img src="./images/it.jpg" usemap="#Map" alt="tyler durden" width="250" height="250" />
+
+              <map name="Map">
+                <area href="https://moodle.kubsu.ru/course/view.php?id=780" shape="rect" coords="0,0,30,30"
+                  alt="прямоугольная ссылка" />
+                <area href="https://moodle.kubsu.ru/course/view.php?id=780" shape="circle" coords="200,200,100"
+                  alt="круглая ссылка" />
+              </map>
+            </li>
+            <li><a href="">ссылка с пустым href</a></li>
+            <li><a> ссылка без href</a></li>
+            <li>
+              <a href="https://kubsu.ru/" rel="nofollow">ссылка по которой нельзя следовать яндексу</a>
+            </li>
+            <li>
+              <!--noindex--><a href="https://kubsu.ru/">ссылка по которой нельзя индексировать
+                яндексу</a><!--/noindex-->
+            </li>
+            <li>
+              <ol>
+                <li title="первый">
+                  <a href="./index.html">ссылка в списке 1</a>
+                </li>
+                <li title="второй">
+                  <a href="./inner.html">ссылка в списке 2</a>
+                </li>
+                <li title="третий">
+                  <a href="./about/about.html">ссылка в списке 3</a>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <a href="ftp://demo:demo@http://demo.wftpserver.com/main.html/download/Summer.jpg">FTP файл</a>
+            </li>
+          </ul>
+        </section>
+        <section class="col-6 col-sm-12 order-1 order-md-2">
+          <table class="table table-bordered table-sm">
             <tr class="odd">
               <th class="table_header" colspan="4" id="table">Таблица</th>
             </tr>
@@ -87,181 +173,28 @@
             </tr>
           </table>
         </section>
-        <section class="section__links">
-          <ul class="list-unstyled">
-            <li class="references__item">
-              <h2 id="links">Ссылки</h2>
-            </li>
-            <li>
-              <a href="http://kubsu.ru">
-                абсолютную гиперссылку на главную страницу сайта kubsu.ru</a
-              >
-            </li>
-            <li>
-              <a href="https://kubsu.ru">
-                абсолютную гиперссылку на главную страницу сайта kubsu.ru
-                https</a
-              >
-            </li>
-            <li>
-              <a href="./images/dog-cat.jpg"
-                ><img
-                  src="./images/dog-cat.jpg"
-                  alt="image"
-                  width="300"
-                  height="200"
-              /></a>
-            </li>
-            <li>
-              <a href=""
-                >сокращенную ссылку на внутреннюю страницу</a
-              >
-            </li>
-            <li>
-              <a href="./index.html">сокращенную ссылку на главную страницу</a>
-            </li>
-            <li><a href="#form">ссылку на фрагмент текущей страницы</a></li>
-            <li>
-              <a
-                href="http://kubsu.ru/?params1=value1&params2=value2&params3=value3"
-                >ссылку с тремя параметрами в URL</a
-              >
-            </li>
-            <li>
-              <a href="https://kubsu.ru/?id=section"
-                >ссылку с параметром id в URL</a
-              >
-            </li>
-            <li>
-              <a href="./inner.html"
-                >относительную на страницу в текущем каталоге</a
-              >
-            </li>
-            <li>
-              <a href="./about/about.html"
-                >относительную на страницу в каталоге about</a
-              >
-            </li>
-            <li>
-              <a href="./about/new/new.html"
-                >относительную на страницу в каталоге двумя уровнями выше</a
-              >
-            </li>
-            <li>
-              <p>
-                Cтудент <a href="https://kubsu.ru/">Кубгу</a> (контексная
-                ссылка)
-              </p>
-            </li>
-            <li>
-              <a href="https://www.kubsu.ru/#section-content"
-                >ссылку на фрагмент страницы стороннего сайта</a
-              >
-            </li>
 
-            <li>
-              <img
-                src="./images/it.jpg"
-                usemap="#Map"
-                alt="tyler durden"
-                width="250"
-                height="250"
-              />
-
-              <map name="Map">
-                <area
-                  href="https://moodle.kubsu.ru/course/view.php?id=780"
-                  shape="rect"
-                  coords="0,0,30,30"
-                  alt="прямоугольная ссылка"
-                />
-                <area
-                  href="https://moodle.kubsu.ru/course/view.php?id=780"
-                  shape="circle"
-                  coords="200,200,100"
-                  alt="круглая ссылка"
-                />
-              </map>
-            </li>
-            <li><a href="">ссылка с пустым href</a></li>
-            <li><a> ссылка без href</a></li>
-            <li>
-              <a href="https://kubsu.ru/" rel="nofollow"
-                >ссылка по которой нельзя следовать яндексу</a
-              >
-            </li>
-            <li>
-              <!--noindex--><a href="https://kubsu.ru/"
-                >ссылка по которой нельзя индексировать яндексу</a
-              ><!--/noindex-->
-            </li>
-            <li>
-              <ol>
-                <li title="первый">
-                  <a href="./index.html">ссылка в списке 1</a>
-                </li>
-                <li title="второй">
-                  <a href="./inner.html">ссылка в списке 2</a>
-                </li>
-                <li title="третий">
-                  <a href="./about/about.html">ссылка в списке 3</a>
-                </li>
-              </ol>
-            </li>
-            <li>
-              <a
-                href="ftp://demo:demo@http://demo.wftpserver.com/main.html/download/Summer.jpg"
-                >FTP файл</a
-              >
-            </li>
-          </ul>
-        </section>
-        <section class="section__form">
+        <section class="col-6 col-md-12 order-3">
           <h2>Форма</h2>
           <form id="form">
             <div class="form-group">
               <label for="fio">ФИО:</label>
-              <input
-                type="text"
-                id="fio"
-                name="fio"
-                class="form-control"
-                required
-                pattern="^[А-Яа-яЁё\s]+$"
-              />
+              <input type="text" id="fio" name="fio" class="form-control" required pattern="^[А-Яа-яЁё\s]+$" />
             </div>
             <div class="form-group">
               <label for="phone">Телефон:</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                class="form-control"
-                required
-                pattern="^[ 0-9]+$"
-              />
+              <input type="tel" id="phone" name="phone" class="form-control" required pattern="^[ 0-9]+$" />
             </div>
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required /><br /><br />
 
             <label for="birthdate">Дата рождения:</label>
-            <input
-              type="date"
-              id="birthdate"
-              name="birthdate"
-              required
-            /><br /><br />
+            <input type="date" id="birthdate" name="birthdate" required /><br /><br />
 
             <label>Пол:</label>
             <input type="radio" id="male" name="gender" value="male" required />
             <label for="male">Мужской</label>
-            <input
-              type="radio"
-              id="female"
-              name="gender"
-              value="female"
-              required
-            />
+            <input type="radio" id="female" name="gender" value="female" required />
             <label for="female">Женский</label><br /><br />
 
             <label>Любимый язык программирования:</label>
@@ -280,12 +213,10 @@
                 <option value="Prolog">Prolog</option>
                 <option value="Scala">Scala</option>
                 <option value="C">C</option>
-              </select> </label
-            ><br /><br />
+              </select> </label><br /><br />
 
             <label for="bio">Биография:</label><br />
-            <textarea id="bio" name="bio" rows="4" cols="50" required></textarea
-            ><br /><br />
+            <textarea id="bio" name="bio" rows="4" cols="40" required></textarea><br /><br />
 
             <input type="checkbox" id="contract" name="contract" required />
             <label for="contract">С контрактом ознакомлен(а)</label><br /><br />
@@ -294,10 +225,13 @@
           </form>
         </section>
       </div>
-    </main>
 
-    <footer class="footer bg-light text-center">
-      <h2>(c) Егор Гуков</h2>
-    </footer>
-  </body>
+    </div>
+  </main>
+
+  <footer class="footer bg-light text-center">
+    <h2>(c) Егор Гуков</h2>
+  </footer>
+</body>
+
 </html>
