@@ -83,4 +83,29 @@ document.addEventListener("DOMContentLoaded", function () {
   handleInput();
 });
 
-
+$(document).ready(function () {
+  $(".slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          centerMode: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 658, 
+        settings: {
+          centerMode: false,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+    ],
+  });
+});
