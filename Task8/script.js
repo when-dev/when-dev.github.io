@@ -116,30 +116,23 @@ const popup = document.getElementById("popup");
 const contactForm = document.getElementById("contactForm");
 const messageContainer = document.getElementById("messageContainer");
 
-// Открытие формы
 openFormBtn.addEventListener("click", function () {
   popup.style.display = "flex";
-  // Меняем URL с использованием History API
   history.pushState({ page: "contact-form" }, "Contact Form", "?form=contact");
 });
 
-// Закрытие формы
 closeFormBtn.addEventListener("click", function () {
   popup.style.display = "none";
-  // Возвращаемся к предыдущему URL
   history.back();
 });
 
-// Обработка отправки формы
 contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Отправка данных на сервер
-  // В данном примере используем formcarry.com как сервер для сохранения форм
   fetch("https://formcarry.com/s/SZlKfSn8w1", {
     method: "POST",
     headers: {
-      "Content-Type": "application/x-www-form-urlencoded", // or 'application/json', depending on formcarry.com requirements
+      "Content-Type": "application/x-www-form-urlencoded", 
     },
     body: new FormData(contactForm),
   })
@@ -154,7 +147,6 @@ contactForm.addEventListener("submit", function (e) {
     });
 });
 
-// Сохранение данных формы в LocalStorage
 window.addEventListener("beforeunload", function () {
   const formData = {};
   for (const input of contactForm.elements) {
@@ -165,7 +157,6 @@ window.addEventListener("beforeunload", function () {
   localStorage.setItem("formData", JSON.stringify(formData));
 });
 
-// Восстановление данных формы при загрузке страницы
 window.addEventListener("DOMContentLoaded", function () {
   const formData = localStorage.getItem("formData");
   if (formData) {
@@ -178,7 +169,6 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Обработка кнопки "Назад" в браузере
 window.addEventListener("popstate", function (event) {
   if (event.state && event.state.page === "contact-form") {
     popup.style.display = "flex";
