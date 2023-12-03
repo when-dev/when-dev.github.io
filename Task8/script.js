@@ -99,88 +99,90 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 658, 
+        breakpoint: 658,
         settings: {
           centerMode: false,
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
     ],
   });
 });
 
+const openFormBtn = document.getElementById("openFormBtn");
+const closeFormBtn = document.getElementById("closeFormBtn");
+const popup = document.getElementById("popup");
+const contactForm = document.getElementById("contactForm");
+const messageContainer = document.getElementById("messageContainer");
 
-const openFormBtn = document.getElementById('openFormBtn');
-    const closeFormBtn = document.getElementById('closeFormBtn');
-    const popup = document.getElementById('popup');
-    const contactForm = document.getElementById('contactForm');
-    const messageContainer = document.getElementById('messageContainer');
+// Открытие формы
+openFormBtn.addEventListener("click", function () {
+  popup.style.display = "flex";
+  // Меняем URL с использованием History API
+  history.pushState({ page: "contact-form" }, "Contact Form", "?form=contact");
+});
 
-    // Открытие формы
-    openFormBtn.addEventListener('click', function () {
-        popup.style.display = 'flex';
-        // Меняем URL с использованием History API
-        history.pushState({ page: 'contact-form' }, 'Contact Form', '?form=contact');
+// Закрытие формы
+closeFormBtn.addEventListener("click", function () {
+  popup.style.display = "none";
+  // Возвращаемся к предыдущему URL
+  history.back();
+});
+
+// Обработка отправки формы
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Отправка данных на сервер
+  // В данном примере используем formcarry.com как сервер для сохранения форм
+  fetch("https://formcarry.com/s/SZlKfSn8w1", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded", // or 'application/json', depending on formcarry.com requirements
+    },
+    body: new FormData(contactForm),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      contactForm.reset();
+
+      messageContainer.textContent = "Форма успешно отправлена!";
+    })
+    .catch((error) => {
+      messageContainer.textContent = "Произошла ошибка при отправке формы.";
     });
+});
 
-    // Закрытие формы
-    closeFormBtn.addEventListener('click', function () {
-        popup.style.display = 'none';
-        // Возвращаемся к предыдущему URL
-        history.back();
-    });
+// Сохранение данных формы в LocalStorage
+window.addEventListener("beforeunload", function () {
+  const formData = {};
+  for (const input of contactForm.elements) {
+    if (input.name) {
+      formData[input.name] = input.value;
+    }
+  }
+  localStorage.setItem("formData", JSON.stringify(formData));
+});
 
-    // Обработка отправки формы
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
+// Восстановление данных формы при загрузке страницы
+window.addEventListener("DOMContentLoaded", function () {
+  const formData = localStorage.getItem("formData");
+  if (formData) {
+    const parsedData = JSON.parse(formData);
+    for (const input of contactForm.elements) {
+      if (input.name && parsedData[input.name]) {
+        input.value = parsedData[input.name];
+      }
+    }
+  }
+});
 
-        // Отправка данных на сервер
-        // В данном примере используем formcarry.com как сервер для сохранения форм
-        fetch('https://formcarry.com/s/SZlKfSn8w1', {
-            method: 'POST',
-            body: new FormData(contactForm),
-        })
-        .then(response => response.json())
-        .then(data => {
-            contactForm.reset();
-
-            messageContainer.textContent = 'Форма успешно отправлена!';
-        })
-        .catch(error => {
-            messageContainer.textContent = 'Произошла ошибка при отправке формы.';
-        });
-    });
-
-    // Сохранение данных формы в LocalStorage
-    window.addEventListener('beforeunload', function () {
-        const formData = {};
-        for (const input of contactForm.elements) {
-            if (input.name) {
-                formData[input.name] = input.value;
-            }
-        }
-        localStorage.setItem('formData', JSON.stringify(formData));
-    });
-
-    // Восстановление данных формы при загрузке страницы
-    window.addEventListener('DOMContentLoaded', function () {
-        const formData = localStorage.getItem('formData');
-        if (formData) {
-            const parsedData = JSON.parse(formData);
-            for (const input of contactForm.elements) {
-                if (input.name && parsedData[input.name]) {
-                    input.value = parsedData[input.name];
-                }
-            }
-        }
-    });
-
-    // Обработка кнопки "Назад" в браузере
-    window.addEventListener('popstate', function (event) {
-        if (event.state && event.state.page === 'contact-form') {
-            popup.style.display = 'flex';
-        } else {
-            popup.style.display = 'none';
-        }
-    });
+// Обработка кнопки "Назад" в браузере
+window.addEventListener("popstate", function (event) {
+  if (event.state && event.state.page === "contact-form") {
+    popup.style.display = "flex";
+  } else {
+    popup.style.display = "none";
+  }
+});
